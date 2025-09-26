@@ -1,2 +1,2 @@
 # HouseEnergy
-A ML pipeline for daily house energy consumption forecasting using varoius ml models.
+A ML pipeline for daily house energy consumption forecasting using varoius ml models.The system integrates data preprocessing, feature engineering, and multiple ML models (such as Linear Regression, Random Forest, XGBoost, and LSTMs) to generate accurate short- and long-term forecasts. This enables better energy planning, cost optimization, and sustainability insights for smart home management
