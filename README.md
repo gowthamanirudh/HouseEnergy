@@ -1,16 +1,16 @@
-# Household Energy Consumption Prediction API
+# HouseEnergy - Household Energy Consumption Prediction
 
-A dockerized machine learning API for predicting household energy consumption using an optimized Random Forest model.
+A ML pipeline for daily house energy consumption forecasting using various ML models. The system integrates data preprocessing, feature engineering, and multiple ML models (such as Linear Regression, Random Forest, XGBoost) to generate accurate short- and long-term forecasts. This enables better energy planning, cost optimization, and sustainability insights for smart home management.
 
-## 📊 Project Overview
+## Project Overview
 
-This project provides a REST API for predicting daily household energy consumption based on historical patterns. The model was trained on 2+ million records of household power consumption data and achieves:
+This project provides a dockerized REST API for predicting daily household energy consumption based on historical patterns. The model was trained on 2+ million records of household power consumption data and achieves:
 
 - **RMSE**: 0.231
 - **MAE**: 0.171
 - **R²**: 0.489
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Using Docker Compose (Recommended)
 
@@ -52,7 +52,7 @@ pip install -r requirements.txt
 python app.py
 ```
 
-## 📡 API Endpoints
+## API Endpoints
 
 Once running, the API will be available at `http://localhost:8000`
 
@@ -100,7 +100,7 @@ POST /predict
 GET /model/info
 ```
 
-**Response:**
+**Response:***
 ```json
 {
   "model_type": "RandomForestRegressor",
@@ -111,7 +111,7 @@ GET /model/info
 }
 ```
 
-## 🧪 Testing the API
+## Testing the API
 
 ### Using cURL
 
@@ -141,7 +141,7 @@ response = requests.post(
 print(response.json())
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 HouseEnergy/
@@ -155,7 +155,7 @@ HouseEnergy/
 └── README.md                           # This file
 ```
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 - **Framework**: FastAPI
 - **ML Library**: scikit-learn
@@ -163,7 +163,7 @@ HouseEnergy/
 - **Server**: Uvicorn
 - **Containerization**: Docker
 
-## 📝 Model Details
+## Model Details
 
 The model uses lag features (past energy consumption values) to predict future consumption:
 - **Input**: 7 lag features (previous days' consumption)
@@ -171,7 +171,7 @@ The model uses lag features (past energy consumption values) to predict future c
 - **Optimization**: Hyperparameter tuning via RandomizedSearchCV
 - **Feature Selection**: Removed features with <1% importance
 
-## 🔧 Configuration
+## Configuration
 
 ### Environment Variables
 
@@ -190,7 +190,7 @@ To change the port, modify:
 - `docker-compose.yml`: Update the ports mapping
 - `Dockerfile`: Update the EXPOSE and CMD instructions
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Container won't start
 ```bash
@@ -212,14 +212,14 @@ ports:
   - "8001:8000"  # Use port 8001 instead
 ```
 
-## 📄 License
+## License
 
 This project is for educational and demonstration purposes.
 
-## 👤 Author
+## Author
 
 Anirudh
 
-## 🤝 Contributing
+## Contributing
 
 Feel free to submit issues and enhancement requests!
